@@ -4,7 +4,15 @@ export default function ItemListContainer() {
   
     const itemParsed=[]
     for(let j of juegos){
-        itemParsed.push(<Item key={j.id} nombre_juego={j.titulo} imagen={j.imagen} precio={j.precio} descripcion={j.descripcion} id={j.descripcion} data="data-lala=123" />)
+        
+        let dataset={}
+        for(let atributo in j ){
+            console.log({atributo})
+            dataset["data-"+atributo]=j[atributo];
+        }
+        
+        console.log({dataset})
+        itemParsed.push(<Item key={j.id} nombre_juego={j.titulo} imagen={j.imagen} precio={j.precio} descripcion={j.descripcion} id={j.id} data={dataset} />)
     }
     return (
     

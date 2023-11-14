@@ -1,4 +1,4 @@
-function Item({nombre_juego, imagen, precio, descripcion, id, data}) {
+function Item({nombre_juego, imagen, precio, descripcion, id, dataset}) {
   return (
     <div className="games__game">
         <div className="games__game_img">
@@ -22,7 +22,7 @@ function Item({nombre_juego, imagen, precio, descripcion, id, data}) {
                 </p>
             </div>
             <div>
-                <a id={"juego_id_"+id} href="#" {...data} className="link_agregar_juego games__game_option_cart">
+                <a id={"juego_id_"+id} href="#" {...dataset} className="link_agregar_juego games__game_option_cart">
 
                     <i className="fa fa-cart-plus" aria-hidden="true"></i>
                     Agregar al carro
