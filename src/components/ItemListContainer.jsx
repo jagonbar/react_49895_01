@@ -1,24 +1,24 @@
 import { juegos } from "/data/juegos.js"
 import Item from "./Item.jsx"
-export default function ItemListContainer() {
+export default function ItemListContainer({greeting}) {
   
     const itemParsed=[]
     for(let j of juegos){
         
         let dataset={}
         for(let atributo in j ){
-            console.log({atributo})
+            // console.log({atributo})
             dataset["data-"+atributo]=j[atributo];
         }
         
-        console.log({dataset})
+        // console.log({dataset})
         itemParsed.push(<Item key={j.id} nombre_juego={j.titulo} imagen={j.imagen} precio={j.precio} descripcion={j.descripcion} id={j.id} data={dataset} />)
     }
     return (
     
     <main>
             <div className="games__title">
-                <h1>Los JUEGOS geniales que tenemos para ti</h1>
+                <h1>{greeting}</h1>
             </div>
             <div className="games__content">
                 <div className="games__options">

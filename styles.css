@@ -1036,5 +1036,30 @@ div.prompt .prompt__buttons #prompt_cancel {
     width: 500px;
   }
 }
-
+#cart{
+  position: relative;
+}
+#numeroItems{
+  font-family: "Jura";
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+  background-color: black;
+  border: 2px solid yellow;
+  color: yellow;
+  /* padding: 2px; */
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  top: -10px;
+  left: 8px;
+  opacity: 0.7;
+}
+#numeroItems::before{
+  content: "";
+}
+#numeroItems::after{
+  content: "";
+}
 /*# sourceMappingURL=styles.css.map */
